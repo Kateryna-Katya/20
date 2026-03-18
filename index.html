@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $domainTitle ?> — Инновационная IT-школа</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 2L26 12L16 22L6 12L16 2Z' fill='%23FFD700'/%3E%3Cpath d='M16 10L22 16L16 22L10 16L16 10Z' fill='%230033FF'/%3E%3Ccircle cx='16' cy='26' r='3' fill='%23FFD700'/%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="hero-canvas"></canvas>
+
+    <header class="header" data-aos="fade-down">
+        <div class="container header__container">
+            <a href="./#hero" class="logo">
+                <span class="logo__icon"></span>
+                <span class="logo__text"><?= $domainTitle ?></span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="./#hero" class="nav__link">Главная</a></li>
+                    <li><a href="./#courses" class="nav__link">Курсы</a></li>
+                    <li><a href="./#benefits" class="nav__link">Преимущества</a></li>
+                    <li><a href="./#mentors" class="nav__link">Менторы</a></li>
+                    <li><a href="./#reviews" class="nav__link">Отзывы</a></li>
+                </ul>
+            </nav>
+
+            <a href="./#contact" class="btn btn--primary header__btn">Связаться</a>
+            
+            <button class="burger" aria-label="Menu">
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <div class="badge" data-aos="fade-right" data-aos-delay="200">
+                        <span>Платформа года</span>
+                    </div>
+                    <h1 class="hero__title" data-aos="fade-up" data-aos-delay="400">
+                        Технологии <span class="text-accent">нового поколения</span> для вашего будущего
+                    </h1>
+                    <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="600">
+                        Воплотите мечты в реальность с экспертной поддержкой на всех этапах. Оцените перспективы проекта и постройте карьеру, которая работает на вас.
+                    </p>
+                    <div class="hero__btns" data-aos="fade-up" data-aos-delay="800">
+                        <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                        <a href="#courses" class="btn btn--secondary">Узнать детали</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll-indicator" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="mouse"></div>
+            </div>
+        </section>
+        <section id="courses" class="courses">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <h2 class="section-title">Наши <span class="text-accent">Программы</span></h2>
+                    <p class="section-subtitle">Выберите направление, которое изменит вашу жизнь сегодня.</p>
+                </div>
+
+                <div class="courses__grid">
+                    <div class="course-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="course-card__icon"><i class="fas fa-code"></i></div>
+                        <h3 class="course-card__title">Fullstack Developer</h3>
+                        <p class="course-card__text">Технология нового поколения для создания сложных веб-систем с нуля.</p>
+                        <ul class="course-card__list">
+                            <li>JavaScript / React</li>
+                            <li>Node.js / SQL</li>
+                        </ul>
+                        <a href="#contact" class="btn btn--secondary card-btn">Узнать детали</a>
+                    </div>
+
+                    <div class="course-card course-card--accent" data-aos="fade-up" data-aos-delay="200">
+                        <div class="course-card__icon"><i class="fas fa-brain"></i></div>
+                        <h3 class="course-card__title">AI & Data Science</h3>
+                        <p class="course-card__text">Инновационная технология анализа данных и обучения нейросетей.</p>
+                        <ul class="course-card__list">
+                            <li>Python / PyTorch</li>
+                            <li>Machine Learning</li>
+                        </ul>
+                        <a href="#contact" class="btn btn--primary card-btn">Начать сейчас</a>
+                    </div>
+
+                    <div class="course-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="course-card__icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="course-card__title">Cyber Security</h3>
+                        <p class="course-card__text">Передовая цифровая инфраструктура и защита данных в реальном времени.</p>
+                        <ul class="course-card__list">
+                            <li>Ethical Hacking</li>
+                            <li>Network Security</li>
+                        </ul>
+                        <a href="#contact" class="btn btn--secondary card-btn">Запросить доступ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="benefits">
+            <div class="benefits__sticky-bg">
+                <h2 class="benefits__huge-title">ADVANTAGES</h2>
+            </div>
+            
+            <div class="container benefits__content">
+                <div class="benefit-item" data-aos="fade-left">
+                    <div class="benefit-item__num">01</div>
+                    <div class="benefit-item__info">
+                        <h3>Быстрый и лёгкий старт</h3>
+                        <p>Легко разобраться без опыта. Подключение к платформе занимает 2 минуты, а обучение построено пошагово.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-left">
+                    <div class="benefit-item__num">02</div>
+                    <div class="benefit-item__info">
+                        <h3>Решения, которые меняют правила игры</h3>
+                        <p>Мы используем AI-инструменты для реальных задач, адаптируя обучение под современные требования рынка ЕС.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-left">
+                    <div class="benefit-item__num">03</div>
+                    <div class="benefit-item__info">
+                        <h3>Экспертная поддержка</h3>
+                        <p>Методологии, доказавшие эффективность. Наши менторы ведут вас на всех этапах — от первой строчки кода до оффера.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item" data-aos="fade-left">
+                    <div class="benefit-item__num">04</div>
+                    <div class="benefit-item__info">
+                        <h3>Пассивный доход</h3>
+                        <p>Стратегия роста на базе инноваций позволяет нашим выпускникам внедрять технологии для пассивного дохода в свои проекты.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mentors" class="mentors">
+            <div class="container">
+                <div class="section-head" data-aos="fade-up">
+                    <h2 class="section-title">Наши <span class="text-accent">Менторы</span></h2>
+                    <p class="section-subtitle">Экспертная поддержка на всех этапах вашего обучения.</p>
+                </div>
+
+                <div class="mentors__grid">
+                    <div class="mentor-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="mentor-card__img">
+                            <img src="/img/one.jpg" alt="Mentor">
+                            <div class="mentor-card__overlay">
+                                <div class="mentor-card__socials">
+                                    <span>@tech_lead</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mentor-card__info">
+                            <h3>Marco Rossi</h3>
+                            <p>Senior Fullstack Dev</p>
+                        </div>
+                    </div>
+
+                    <div class="mentor-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="mentor-card__img">
+                            <img src="/img/two.jpg" alt="Mentor">
+                            <div class="mentor-card__overlay">
+                                <div class="mentor-card__socials">
+                                    <span>@ai_expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mentor-card__info">
+                            <h3>Giulia Bianchi</h3>
+                            <p>AI Infrastructure Lead</p>
+                        </div>
+                    </div>
+
+                    <div class="mentor-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="mentor-card__img">
+                            <img src="/img/three.jpg" alt="Mentor">
+                            <div class="mentor-card__overlay">
+                                <div class="mentor-card__socials">
+                                    <span>@cyber_sec</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mentor-card__info">
+                            <h3>Luca Verda</h3>
+                            <p>Security Architect</p>
+                        </div>
+                    </div>
+
+                    <div class="mentor-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="mentor-card__img">
+                            <img src="/img/four.jpg" alt="Mentor">
+                            <div class="mentor-card__overlay">
+                                <div class="mentor-card__socials">
+                                    <span>@data_ninja</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mentor-card__info">
+                            <h3>Sofia Conti</h3>
+                            <p>Data Science Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews">
+            <div class="section-head" data-aos="fade-up">
+                <h2 class="section-title">Отзывы <span class="text-accent">студентов</span></h2>
+            </div>
+            
+            <div class="marquee">
+                <div class="marquee__inner">
+                    <div class="review-item">
+                        <div class="review-item__header">
+                            <div class="review-item__avatar avatar--yellow">AL</div>
+                            <div class="review-item__meta">
+                                <h4>Alessandro L.</h4>
+                                <span>Курс Fullstack</span>
+                            </div>
+                        </div>
+                        <p class="review-item__text">«Решения, которые меняют правила игры. Обучение помогло мне переосмыслить подход к развитию и найти работу в Европе.»</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-item__header">
+                            <div class="review-item__avatar avatar--blue">MC</div>
+                            <div class="review-item__meta">
+                                <h4>Matteo C.</h4>
+                                <span>Курс AI Tools</span>
+                            </div>
+                        </div>
+                        <p class="review-item__text">«Технологии, которые работают на вас. Легко разобраться без опыта, поддержка по всем вопросам 24/7.»</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-item__header">
+                            <div class="review-item__avatar avatar--yellow">FV</div>
+                            <div class="review-item__meta">
+                                <h4>Francesca V.</h4>
+                                <span>Cyber Security</span>
+                            </div>
+                        </div>
+                        <p class="review-item__text">«Передовая цифровая инфраструктура школы впечатляет. Практики, применимые уже сегодня, дали мощный старт.»</p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-item__header">
+                            <div class="review-item__avatar avatar--yellow">AL</div>
+                            <div class="review-item__meta">
+                                <h4>Alessandro L.</h4>
+                                <span>Курс Fullstack</span>
+                            </div>
+                        </div>
+                        <p class="review-item__text">«Решения, которые меняют правила игры. Обучение помогло мне переосмыслить подход к развитию и найти работу в Европе.»</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-item__header">
+                            <div class="review-item__avatar avatar--blue">MC</div>
+                            <div class="review-item__meta">
+                                <h4>Matteo C.</h4>
+                                <span>Курс AI Tools</span>
+                            </div>
+                        </div>
+                        <p class="review-item__text">«Технологии, которые работают на вас. Легко разобраться без опыта, поддержка по всем вопросам 24/7.»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container contact__container">
+                <div class="contact__info" data-aos="fade-right">
+                    <h2 class="section-title">Готовы к <span class="text-accent">старту?</span></h2>
+                    <p class="contact__text">Получите бесплатную консультацию по всем вопросам. Наши эксперты помогут подобрать программу пассивного дохода или стратегию карьерного роста.</p>
+                    
+                    <div class="contact__details">
+                        <div class="contact__item">
+                            <span class="contact__icon">📍</span>
+                            <p>Via Condotti, 10, 00187 Roma RM, Italy</p>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__icon">📞</span>
+                            <a href="tel:+390697638315">+39 06 9763 8315</a>
+                        </div>
+                        <div class="contact__item">
+                            <span class="contact__icon">✉️</span>
+                            <a href="mailto:support@<?= $fullDomain ?>">support@<?= $fullDomain ?></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__form-wrapper" data-aos="fade-left">
+                    <form id="main-form" class="form">
+                        <div class="form__group">
+                            <input type="text" name="name" placeholder="Ваше имя" required class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <input type="email" name="email" placeholder="Email" required class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <input type="tel" name="phone" id="phone-input" placeholder="Телефон (только цифры)" required class="form__input">
+                        </div>
+                        
+                        <div class="form__captcha">
+                            <label for="captcha">Сколько будет <span id="captcha-question"></span>?</label>
+                            <input type="number" id="captcha-answer" placeholder="Ответ" required class="form__input">
+                        </div>
+
+                        <div class="form__checkbox">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">Я согласен с <a href="./personal-data-policy.php">политикой конфиденциальности</a></label>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary form__btn">Начать сейчас</button>
+                        
+                        <div id="form-message" class="form__message"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="./#hero" class="logo footer__logo">
+                    <span class="logo__text"><?= $domainTitle ?></span>
+                </a>
+                <p class="footer__desc">Технологии нового поколения для вашего карьерного взлета. Постройте будущее, которое работает на вас.</p>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Навигация</h4>
+                <ul class="footer__list">
+                    <li><a href="./#hero">Главная</a></li>
+                    <li><a href="./#courses">Программы</a></li>
+                    <li><a href="./#benefits">Почему мы</a></li>
+                    <li><a href="./#reviews">Отзывы</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Документация</h4>
+                <ul class="footer__list">
+                    <li><a href="./privacy.php">Privacy Policy</a></li>
+                    <li><a href="./terms.php">Terms of Use</a></li>
+                    <li><a href="./cookies.php">Cookie Policy</a></li>
+                    <li><a href="./return.php">Refund Policy</a></li>
+                    <li><a href="./disclaimer.php">Disclaimer</a></li>
+                    <li><a href="./personal-data-policy.php">Personal Data</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Контакты</h4>
+                <ul class="footer__contacts">
+                    <li><a href="tel:+390697638315">+39 06 9763 8315</a></li>
+                    <li><a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a></li>
+                    <li><address>Via del Corso, 418, 00186 Roma RM, Italy</address></li>
+                    <li><a href="./contact.php" class="footer__link-special">Форма обратной связи</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom container">
+            <p>&copy; 2026 <?= $domainTitle ?>. Все права защищены. Предложение активно в странах ЕС.</p>
+        </div>
+    </footer>
+
+    <div id="cookie-popup" class="cookie-popup">
+        <div class="cookie-popup__content">
+            <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie политике</a>.</p>
+            <button id="cookie-accept" class="btn btn--primary btn--small">Принять</button>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-menu__list">
+            <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
+            <li><a href="./#courses" class="mobile-menu__link">Курсы</a></li>
+            <li><a href="./#benefits" class="mobile-menu__link">Преимущества</a></li>
+            <li><a href="./#mentors" class="mobile-menu__link">Менторы</a></li>
+            <li><a href="./#reviews" class="mobile-menu__link">Отзывы</a></li>
+            <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
+        </ul>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
